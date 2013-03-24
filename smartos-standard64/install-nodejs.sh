@@ -9,7 +9,9 @@ log( ){
 rm $LOG
 rm /opt/node*
 
+log 'Dump the environments..'
 env >> $LOG
+log '------------------------------'
 
 log 'Update database...' 
 pkgin update
@@ -25,11 +27,14 @@ wget http://nodejs.org/dist/v0.10.1/node-v0.10.1.tar.gz
 tar -xzf node-v0.10.1.tar.gz
 
 log 'Compile resources...'
-cd /opt/node-v0.10.1
 mkdir /opt/bin
-/opt/bin
-cd /opt/node-v0.10.1/configure --prefix=/opt/bin/node-v0.10.1 && make && make install
+cd /opt/node-v0.10.1
+/opt/node-v0.10.1/configure --prefix=/opt/bin/node-v0.10.1 >> $LOG
+make >> $LOG
+make install >> $LOG
 
 cd /opt
 log 'Making symbolic link...'
 ln -s bin/node-v0.10.1 node
+
+log 'End of installer...'
