@@ -1,5 +1,7 @@
 #!/bin/bash
 export LOG=/root/init.log
+export PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
+
 log( ){
   echo $1 >> $LOG
 }
