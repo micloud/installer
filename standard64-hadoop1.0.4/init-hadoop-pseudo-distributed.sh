@@ -52,6 +52,6 @@ cat $SSH_HOME/id_rsa.pub >> $SSH_HOME/authorized_keys
 
 echo "===============Execution==============="
 cd $HADOOP
-bin/hadoop namenode -format
+echo "Y" | bin/hadoop namenode -format
 bin/start-all.sh
 
