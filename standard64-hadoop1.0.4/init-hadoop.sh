@@ -46,6 +46,7 @@ EOF
 
 cat /tmp/bashrc.tmp >> ~/.bashrc
 
+. ~/.bashrc
 
 echo "===============Setup passphraseless ssh==============="
 echo "Start to sync ssh key ..."
