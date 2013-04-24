@@ -26,6 +26,7 @@ export CLASSPATH=$JAVA_HOME/lib/tools.jar:.
 EOF
 [ ! -n "$( cat ~/.bashrc | grep JAVA_HOME | grep java )" ] && cat /tmp/bashrc.tmp >> ~/.bashrc
 
+. ~/.bashrc
 
 echo "===============Standalone Operation==============="
 cd $HADOOP
