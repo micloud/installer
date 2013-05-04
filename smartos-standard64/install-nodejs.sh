@@ -1,7 +1,7 @@
 #!/bin/bash
 export LOG=/root/init.log
 export PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
-export NODE=v0.10.1
+export NODE=v0.10.5
 
 log( ){
   echo $1 >> $LOG
